@@ -33,7 +33,8 @@ public class Application {
 		int arrbound2 = r.nextInt(50);
 		Car [][] arrcars = new Car [arrbound1][arrbound2];
 		
-	
+		
+		
 		for (int i = 0; i < arrbound1; i++) {
 			for (int j = 0; j < arrbound2; j++) {
 				arrcars[i][j] = new Car(getRandomValueOfRange(70, 350), getRandomValueOfRange(1930, 2020));
@@ -50,12 +51,14 @@ public class Application {
 			
 			String menuitem = sc.next();
 			if (menuitem.equals("1")) {
+				System.out.println("> Creating array of Car[" + arrbound1 + "][" + arrbound2 + "]");
 				System.out.println(Arrays.deepToString(arrcars));
 			} else if (menuitem.equals("2")) {
 				for (int i = 0; i < arrbound1; i++) {
-					Arrays.fill(arrcars[i], new Car(230, 2020)); //Car(r.nextInt(300), getRandomValueOfRange(1930, 2020))
-					System.out.println(Arrays.deepToString(arrcars));
+					Arrays.fill(arrcars[i], new Car(230, 2020)); 
 				}
+				
+				System.out.println(Arrays.deepToString(arrcars));
 			} else {
 				System.out.println("Press 1 or 2 to choose menu item");
 			}
